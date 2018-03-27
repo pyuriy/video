@@ -19,4 +19,4 @@ ffmpeg -y -i $SRC -c:v libx264 -b:v 600k -pix_fmt +yuv420p -profile:v high -leve
         scale=640:360, eq=1:0:1:0.95:1:0.95:1, unsharp=5:5:1:3:3:1" -sws_flags lanczos -aspect 1.7778 \
         -pass 2 -c:a aac -b:a 128k -ar 44100 -ac 2 $DST
 
-MP4box -inter 500 $DST
+MP4Box -inter 500 $DST
