@@ -17,6 +17,6 @@ ffmpeg -y -i $SRC -c:v libx264 -b:v 600k -pix_fmt +yuv420p -profile:v high -leve
 ffmpeg -y -i $SRC -c:v libx264 -b:v 600k -pix_fmt +yuv420p -profile:v high -level 3.0 \
         -vf "yadif=0:-1:1, crop=min(iw\,ih/sar*1.7778):min(ih\,iw*sar/1.7778), \
         scale=640:360, eq=1:0:1:0.95:1:0.95:1, unsharp=5:5:1:3:3:1" -sws_flags lanczos -aspect 1.7778 \
-        -pass 2 -c:a aac -b:a 128k -ar 44100 -ac 2 $DST
+        -pass 2 -c:a aac -b:a 128k -ar 44100 -ac 1 $DST
 
 MP4Box -inter 500 $DST
