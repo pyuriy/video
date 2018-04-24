@@ -1,7 +1,7 @@
 #!/bin/bash
 # Convert Video from H.265 to H.264 
 
-SRC0=$1
+SRC=$1
 DST=out-$1
 
 # Converting from from hevc to h264
