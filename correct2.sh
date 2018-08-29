@@ -4,7 +4,7 @@ SRC0=$1
 SRC=in-$1
 DST=out-$1
 
-ffmpeg -i $SRC0 -i NTDLogo2015-HD.png -filter_complex "[0:v][1:v] overlay=0:0" -pix_fmt yuv420p -c:a copy $SRC
+ffmpeg -i $SRC0 -i NTDLogo2018-HD.png -filter_complex "[0:v][1:v] overlay=0:0" -pix_fmt yuv420p -c:a copy $SRC
 
 # mp=eq2= The old order was gamma:contrast:brightness:saturation:rg:gg:bg:weight
 # The new contrast:brightness:saturation:gamma:gamma_red:gamma_green:gamma_blue:gamma_weighted:eval
